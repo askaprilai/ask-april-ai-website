@@ -4,6 +4,7 @@
     background: linear-gradient(135deg, #000 0%, #333 100%);
     color: white;
     padding: 120px 0 80px;
+    margin-top: 70px;
     position: relative;
     overflow: hidden;
 }
@@ -61,12 +62,24 @@
     font-weight: 500;
     font-size: 0.9rem;
     border: 1px solid rgba(255, 215, 0, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+}
+
+.copilot-hero .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.copilot-hero .btn-secondary:hover {
+    background: #fff;
+    color: #000;
 }
 
 .copilot-demo {
@@ -268,6 +281,34 @@
     line-height: 1.6;
 }
 
+.process-cta {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.btn-large {
+    font-size: 1.2rem;
+    padding: 18px 36px;
+    margin-bottom: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-large:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.cta-subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+    font-style: italic;
+}
+
 /* Benefits Section */
 .copilot-benefits {
     padding: 80px 0;
@@ -353,6 +394,12 @@
     padding: 2rem;
     border-radius: 15px;
     border-left: 4px solid #FFD700;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
 }
 
 .testimonial-card p {
@@ -397,6 +444,17 @@
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+.copilot-cta .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.copilot-cta .btn-secondary:hover {
+    background: #fff;
+    color: #000;
 }
 
 .cta-note {

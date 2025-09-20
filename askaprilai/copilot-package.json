@@ -1,0 +1,20 @@
+{
+  "name": "ask-april-ai-copilot",
+  "version": "1.0.0",
+  "description": "AI Co-Pilot backend for document generation",
+  "main": "ai-copilot-backend.js",
+  "scripts": {
+    "start": "node ai-copilot-backend.js",
+    "dev": "node ai-copilot-backend.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "keywords": ["ai", "copilot", "document-generation", "business-tools"],
+  "author": "Ask April AI",
+  "license": "MIT"
+}

@@ -5,16 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!input) return;
     
     const questions = [
-        "How do I have a conversation with an underperforming employee?",
+        "How do I talk to an underperforming employee?",
         "How do I stay positive when sales are down?",
-        "How do I address a team member who's always negative?",
-        "How do I have the conversation about a promotion denial?",
-        "How do I motivate someone who seems checked out?",
-        "How do I handle conflict between two team members?",
+        "How do I address a negative team member?", 
+        "How do I handle a promotion denial conversation?",
+        "How do I motivate someone who's checked out?",
+        "How do I resolve conflict between team members?",
         "How do I give feedback without hurting feelings?",
-        "How do I stay calm when a customer is yelling at me?",
-        "How do I have a difficult conversation with my boss?",
-        "How do I build confidence in a shy employee?"
+        "How do I stay calm with angry customers?",
+        "How do I have difficult conversations with my boss?",
+        "How do I build confidence in shy employees?",
+        "What do I say when someone calls in sick again?",
+        "How do I delegate without micromanaging?"
     ];
     
     let currentQuestionIndex = 0;

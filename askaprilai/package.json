@@ -1,0 +1,26 @@
+{
+  "name": "ask-april-ai-website",
+  "version": "1.0.0",
+  "description": "Ask April AI - Leadership Coaching Platform",
+  "main": "askapril-replica.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build needed for static site'",
+    "start": "node ai-copilot-backend.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/askaprilai/AprilAI.git"
+  },
+  "author": "Ask April AI",
+  "license": "MIT"
+}

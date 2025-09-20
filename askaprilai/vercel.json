@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "askapril-replica.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "ai-copilot-backend.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/askaprilai/$1"
+    },
+    {
+      "src": "/api/copilot/(.*)",
+      "dest": "/askaprilai/ai-copilot-backend.js"
+    }
+  ],
+  "functions": {
+    "askaprilai/ai-copilot-backend.js": {
+      "maxDuration": 30
+    }
+  }
+}

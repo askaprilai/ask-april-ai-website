@@ -12,17 +12,12 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/askaprilai/$1"
+      "src": "/api/copilot/(.*)",
+      "dest": "/ai-copilot-backend.js"
     },
     {
-      "src": "/api/copilot/(.*)",
-      "dest": "/askaprilai/ai-copilot-backend.js"
+      "src": "/(.*)",
+      "dest": "/$1"
     }
-  ],
-  "functions": {
-    "askaprilai/ai-copilot-backend.js": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }

@@ -1,7 +1,9 @@
 // AI Co-Pilot Frontend Controller
 class AICopilotController {
     constructor() {
-        this.apiBaseUrl = 'http://localhost:3002/api/copilot';
+        this.apiBaseUrl = window.location.hostname === 'localhost' 
+            ? 'http://localhost:3002/api/copilot'
+            : '/api/copilot';
         this.currentConversation = null;
         this.currentStep = 'initial';
         this.init();

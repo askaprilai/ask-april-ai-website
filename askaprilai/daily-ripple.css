@@ -1,0 +1,580 @@
+/* Daily Ripple Page Styles */
+
+/* Audio Visualizer Animation */
+.audio-visualizer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 40px;
+    margin: 1rem 0;
+}
+
+.visualizer-bar {
+    width: 4px;
+    background: linear-gradient(to top, #FFD700, #FFA500);
+    border-radius: 2px;
+    animation: audioWave 1.5s ease-in-out infinite;
+    transform-origin: bottom;
+}
+
+.visualizer-bar:nth-child(1) { height: 20px; animation-delay: 0s; }
+.visualizer-bar:nth-child(2) { height: 35px; animation-delay: 0.1s; }
+.visualizer-bar:nth-child(3) { height: 25px; animation-delay: 0.2s; }
+.visualizer-bar:nth-child(4) { height: 40px; animation-delay: 0.3s; }
+.visualizer-bar:nth-child(5) { height: 30px; animation-delay: 0.4s; }
+.visualizer-bar:nth-child(6) { height: 35px; animation-delay: 0.5s; }
+.visualizer-bar:nth-child(7) { height: 20px; animation-delay: 0.6s; }
+.visualizer-bar:nth-child(8) { height: 25px; animation-delay: 0.7s; }
+.visualizer-bar:nth-child(9) { height: 40px; animation-delay: 0.8s; }
+.visualizer-bar:nth-child(10) { height: 30px; animation-delay: 0.9s; }
+
+@keyframes audioWave {
+    0%, 100% {
+        transform: scaleY(0.3);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/* Pause the animation when not playing */
+.audio-visualizer.paused .visualizer-bar {
+    animation-play-state: paused;
+    transform: scaleY(0.3);
+    opacity: 0.7;
+}
+
+.ripple-hero {
+    background: linear-gradient(135deg, #000 0%, #333 100%);
+    color: #fff;
+    padding: 120px 0 80px;
+    margin-top: 70px;
+}
+
+.ripple-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ripple-host {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.host-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #FFD700;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+.host-badge {
+    background: #FFD700;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ripple-intro h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ripple-subtitle {
+    font-size: 1.3rem;
+    color: #ccc;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.ripple-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Player Preview */
+.player-mockup {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    color: #000;
+}
+
+.player-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.episode-host {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.player-host-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #FFD700;
+    object-fit: cover;
+    margin-right: -10px;
+    z-index: 1;
+}
+
+.play-button-large {
+    width: 60px;
+    height: 60px;
+    background: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.play-button-large:hover {
+    transform: scale(1.1);
+}
+
+.episode-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.episode-info p {
+    color: #666;
+    margin: 0;
+}
+
+.waveform-visual {
+    display: flex;
+    align-items: end;
+    gap: 3px;
+    height: 40px;
+}
+
+.wave-bar {
+    width: 4px;
+    background: #FFD700;
+    border-radius: 2px;
+    opacity: 0.7;
+    animation: wave 2s infinite ease-in-out;
+}
+
+.wave-bar:nth-child(even) {
+    animation-delay: 0.3s;
+}
+
+@keyframes wave {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Today's Ripple */
+.todays-ripple {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.todays-ripple h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.episode-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.episode-card.featured {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 30px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.episode-date {
+    text-align: center;
+    background: #FFD700;
+    padding: 15px;
+    border-radius: 12px;
+    color: #000;
+}
+
+.date-day {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.date-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.date-month {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.episode-content h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.episode-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.episode-meta {
+    display: flex;
+    gap: 20px;
+}
+
+.episode-meta span {
+    background: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.episode-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.play-btn, .save-btn, .share-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.play-btn {
+    background: #FFD700;
+    color: #000;
+}
+
+.play-btn:hover {
+    background: #000;
+    color: #FFD700;
+}
+
+.save-btn, .share-btn {
+    background: #f8f9fa;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.save-btn:hover, .share-btn:hover {
+    background: #e9ecef;
+}
+
+/* Weekly Archive */
+.weekly-archive {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.weekly-archive h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.week-episodes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.week-episodes .episode-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 25px;
+}
+
+.episode-number {
+    width: 40px;
+    height: 40px;
+    background: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #000;
+}
+
+.episode-info h4 {
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.episode-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.duration {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.mini-play-btn {
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border: 2px solid #FFD700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.mini-play-btn:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+/* Community Features */
+.ripple-community {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.ripple-community h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.community-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.community-card:hover {
+    transform: translateY(-5px);
+}
+
+.community-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.community-card h3 {
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.community-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.community-link {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.community-link:hover {
+    color: #000;
+}
+
+/* Membership CTA */
+.ripple-cta {
+    padding: 80px 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cta-note {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .ripple-hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .ripple-intro h1 {
+        font-size: 2.5rem;
+    }
+    
+    .ripple-stats {
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .episode-card.featured {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn-primary,
+    .cta-buttons .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .ripple-host {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .host-photo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .player-host-photo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .ripple-intro h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animation for loading states */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}

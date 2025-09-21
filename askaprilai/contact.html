@@ -59,10 +59,8 @@
                 </div>
 
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/xanykqpv" method="POST" class="contact-form-fields">
-                        <input type="hidden" name="_next" value="https://ask-april-ai-website-5jro10x48-askapril.vercel.app/contact.html?success=true">
-                        <input type="hidden" name="_subject" value="🚨 NEW Contact Form Submission - Ask April AI">
-                        <input type="hidden" name="_replyto" value="april@aprilsabral.com">
+                    <form id="contactForm" class="contact-form-fields">
+                        <input type="hidden" name="form-name" value="contact">
                         
                         <div class="form-group">
                             <label for="name">Full Name</label>
@@ -170,25 +168,46 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        // Check if form was successfully submitted (from redirect)
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('success') === 'true') {
-                showNotification('✅ Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
-                // Clean up URL
-                window.history.replaceState({}, '', window.location.pathname);
-            }
-        });
+        // Initialize EmailJS with public key
+        emailjs.init('0wY7dvF9yZgzlKfpG');
         
-        // Optional: Add loading state to form submission
-        document.querySelector('.contact-form-fields').addEventListener('submit', function(e) {
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
             const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
             
-            // The form will submit normally to Web3Forms
-            // Web3Forms will redirect back with success parameter
+            try {
+                // Get form data
+                const formData = new FormData(this);
+                const templateParams = {
+                    from_name: formData.get('name'),
+                    from_email: formData.get('email'),
+                    company: formData.get('company') || 'Not provided',
+                    industry: formData.get('industry') || 'Not provided',
+                    subject: formData.get('subject'),
+                    message: formData.get('message'),
+                    to_email: 'april@aprilsabral.com'
+                };
+                
+                // Send email via EmailJS
+                await emailjs.send('service_askapril', 'template_contact', templateParams);
+                
+                showNotification('✅ Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
+                this.reset();
+                
+            } catch (error) {
+                console.error('Form submission error:', error);
+                showNotification('❌ There was an error sending your message. Please email us directly at april@aprilsabral.com', 'error');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
         });
         
         // Notification system

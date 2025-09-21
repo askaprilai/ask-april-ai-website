@@ -478,6 +478,17 @@
     color: #000;
 }
 
+.coming-soon {
+    display: inline-block;
+    background: #6c757d;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
 /* Membership CTA */
 .ripple-cta {
     padding: 80px 0;

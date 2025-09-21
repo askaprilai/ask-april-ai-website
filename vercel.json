@@ -1,10 +1,23 @@
 {
-  "cleanUrls": true,
-  "redirects": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/about-us",
-      "destination": "/board-members",
-      "permanent": false
+      "src": "askaprilai/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/askaprilai/askapril-replica.html"
+    },
+    {
+      "src": "/askaprilai/(.*)",
+      "dest": "/askaprilai/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/askaprilai/$1"
     }
   ]
 }

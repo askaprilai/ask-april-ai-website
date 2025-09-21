@@ -4,8 +4,8 @@
 class SupabaseClient {
     constructor() {
         // These will need to be set in your Vercel environment variables
-        this.supabaseUrl = process.env.SUPABASE_URL || 'https://your-project.supabase.co';
-        this.supabaseKey = process.env.SUPABASE_ANON_KEY || 'your-anon-key-here';
+        this.supabaseUrl = process.env.SUPABASE_URL || 'https://lazhyxkgitvzrcbztypu.supabase.co';
+        this.supabaseKey = process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxhemh5eGtnaXR2enJjYnp0eXB1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0MTgwMTksImV4cCI6MjA3Mzk5NDAxOX0.csaI5PWkku4SqiXTY0lYVSNaTEJSQx-W4Dv1hAor1tM';
         this.apiUrl = `${this.supabaseUrl}/rest/v1`;
     }
 

@@ -2,42 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "**/*.html",
+      "src": "askaprilai/**",
       "use": "@vercel/static"
-    },
-    {
-      "src": "**/*.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "**/*.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "**/*.png",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "**/*.jpg",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "ai-copilot-backend.js",
-      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/copilot/(.*)",
-      "dest": "/ai-copilot-backend.js"
+      "src": "/",
+      "dest": "/askaprilai/askapril-replica.html"
     },
     {
-      "src": "/",
-      "dest": "/askapril-replica.html"
+      "src": "/askaprilai/(.*)",
+      "dest": "/askaprilai/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/askaprilai/$1"
     }
   ]
 }

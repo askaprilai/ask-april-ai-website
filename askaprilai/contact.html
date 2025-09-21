@@ -214,18 +214,41 @@
                 });
                 
                 if (response.ok) {
-                    // Success
+                    // Success - data saved to Supabase
                     showNotification('✅ Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
                     form.reset();
                     
-                    // Also send fallback email using Web3Forms
+                    // Send notification email to April
                     try {
+                        const notificationData = new FormData();
+                        notificationData.append('access_key', 'bb8da46e-4e13-46ce-9d8b-b88e5abc0e4a');
+                        notificationData.append('subject', '🚨 NEW Contact Form Submission - Ask April AI');
+                        notificationData.append('from_name', 'Ask April AI Website');
+                        notificationData.append('to', 'april@aprilsabral.com');
+                        notificationData.append('message', `
+NEW CONTACT FORM SUBMISSION:
+
+Name: ${contactData.name}
+Email: ${contactData.email}
+Company: ${contactData.company || 'Not provided'}
+Industry: ${contactData.industry || 'Not provided'}
+Subject: ${contactData.subject}
+
+Message:
+${contactData.message}
+
+Submitted: ${new Date().toLocaleString()}
+
+You can view this in your Supabase dashboard: https://supabase.com
+                        `);
+                        
                         await fetch('https://web3forms.com/submit', {
                             method: 'POST',
-                            body: formData
+                            body: notificationData
                         });
-                    } catch (fallbackError) {
-                        console.log('Fallback email failed, but Supabase succeeded');
+                        console.log('Notification email sent to April');
+                    } catch (notificationError) {
+                        console.log('Notification email failed, but data saved to database');
                     }
                 } else {
                     throw new Error('Failed to send message');

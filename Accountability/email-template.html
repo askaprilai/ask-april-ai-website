@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Leadership Report - Positive Accountability Index™</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #4a5568;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: 300;
+        }
+        .content {
+            padding: 30px;
+        }
+        .score-card {
+            background: linear-gradient(135deg, rgba(72, 187, 120, 0.1) 0%, rgba(56, 178, 172, 0.1) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #48bb78;
+            text-align: center;
+        }
+        .score-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4a90e2;
+            margin-bottom: 10px;
+        }
+        .priority-area {
+            background: rgba(255, 235, 59, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #ffd700;
+        }
+        .framework-step {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 3px solid #4a90e2;
+        }
+        .step-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .action-item {
+            background: rgba(74, 144, 226, 0.05);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #4a90e2;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            margin: 15px 0;
+        }
+        .book-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 4px solid #ffd700;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .book-image {
+            flex-shrink: 0;
+        }
+        .book-content {
+            flex: 1;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #718096;
+        }
+        @media (max-width: 600px) {
+            .book-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Your Leadership Report</h1>
+            <p style="margin: 10px 0 0 0; opacity: 0.9;">The Positive Accountability Index™</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <p>Hi {{firstName}},</p>
+            
+            <p>Thank you for completing The Positive Accountability Index™ assessment! Your personalized leadership report is ready.</p>
+
+            <!-- Score Card -->
+            <div class="score-card">
+                <div class="score-number">{{percentageScore}}%</div>
+                <h3 style="margin: 0; color: #4a5568;">Leadership Effectiveness Score</h3>
+                <p style="margin: 10px 0 0 0; color: #718096;">{{scoreDescription}}</p>
+            </div>
+
+            <!-- Priority Development Area -->
+            <div class="priority-area">
+                <h3 style="color: #4a5568; margin-bottom: 15px;">🎯 Your Priority Development Area</h3>
+                <h4 style="color: #2c3e50; font-size: 1.2em; margin-bottom: 10px;">{{priorityStepName}}</h4>
+                <p style="color: #718096; margin: 0;">Focus on this area first for maximum leadership impact.</p>
+            </div>
+
+            <!-- Framework Breakdown -->
+            <h3 style="color: #4a5568; margin: 30px 0 20px 0;">Your 9-Step Framework Analysis</h3>
+
+            <div class="framework-step">
+                <div class="step-title">Step 1: Right Person, Right Role</div>
+                <p>Score: {{step1Score}}/4 | {{step1Feedback}}</p>
+                <div class="action-item">
+                    <strong>Action:</strong> {{step1Action}}
+                </div>
+            </div>
+
+            <div class="framework-step">
+                <div class="step-title">Step 2: Expectations Are Clear & Confirmed</div>
+                <p>Score: {{step2Score}}/4 | {{step2Feedback}}</p>
+                <div class="action-item">
+                    <strong>Action:</strong> {{step2Action}}
+                </div>
+            </div>
+
+            <div class="framework-step">
+                <div class="step-title">Step 3: Agreed Consequences for Missed Expectations</div>
+                <p>Score: {{step3Score}}/4 | {{step3Feedback}}</p>
+                <div class="action-item">
+                    <strong>Action:</strong> {{step3Action}}
+                </div>
+            </div>
+
+            <div class="framework-step">
+                <div class="step-title">Step 4: Follow-Up Plan Locked In</div>
+                <p>Score: {{step4Score}}/4 | {{step4Feedback}}</p>
+                <div class="action-item">
+                    <strong>Action:</strong> {{step4Action}}
+                </div>
+            </div>
+
+            <div class="framework-step">
+                <div class="step-title">Step 5: Course-Correct Quickly</div>
+                <p>Score: {{step5Score}}/4 | {{step5Feedback}}</p>
+                <div class="action-item">
+                    <strong>Action:</strong> {{step5Action}}
+                </div>
+            </div>
+
+            <div class="framework-step">
+                <div class="step-title">Step 6: Show Up Consistently</div>
+                <p>Score: {{step6Score}}/4 | {{step6Feedback}}</p>
+                <div class="action-item">
+                    <strong>Action:</strong> {{step6Action}}
+                </div>
+            </div>
+
+            <div class="framework-step">
+                <div class="step-title">Step 7: Clarify Before You Assume</div>
+                <p>Score: {{step7Score}}/4 | {{step7Feedback}}</p>
+                <div class="action-item">
+                    <strong>Action:</strong> {{step7Action}}
+                </div>
+            </div>
+
+            <div class="framework-step">
+                <div class="step-title">Step 8: Celebrate What's Working</div>
+                <p>Score: {{step8Score}}/4 | {{step8Feedback}}</p>
+                <div class="action-item">
+                    <strong>Action:</strong> {{step8Action}}
+                </div>
+            </div>
+
+            <div class="framework-step">
+                <div class="step-title">Step 9: Missed the Mark? Restart at Step 1</div>
+                <p>Score: {{step9Score}}/4 | {{step9Feedback}}</p>
+                <div class="action-item">
+                    <strong>Action:</strong> {{step9Action}}
+                </div>
+            </div>
+
+            <!-- Book Recommendation -->
+            <div class="book-section">
+                <div class="book-image">
+                    <img src="https://positiveaccountability.info/images/AOS.png" alt="Positive Accountability for Teams Book" style="width: 120px; height: auto; border-radius: 8px;">
+                </div>
+                <div class="book-content">
+                    <h4 style="color: #4a5568; margin-bottom: 10px;">Want to Dive Deeper?</h4>
+                    <p style="color: #718096; margin-bottom: 15px;"><strong>Positive Accountability for Teams</strong></p>
+                    <p style="color: #4a5568; font-size: 0.9em; margin: 0;">Master the complete framework with practical tools and real-world examples.</p>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div style="text-align: center; margin: 30px 0;">
+                <h3 style="color: #4a5568; margin-bottom: 15px;">Ready to Transform Your Leadership?</h3>
+                <p style="color: #718096; margin-bottom: 20px;">Interested in team assessments or leadership development programs?</p>
+                <a href="mailto:hello@askapril.ai?subject=Team Assessment Inquiry&body=Hi! I just received my individual assessment results and I'm interested in learning more about team assessments and leadership programs." class="cta-button">Explore Team Programs</a>
+            </div>
+
+            <p style="margin-top: 30px;">Best regards,<br><strong>April Sabral & Team</strong><br>AskApril AI</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 AskApril AI. All rights reserved.</p>
+            <p>You received this email because you completed The Positive Accountability Index™ assessment.</p>
+        </div>
+    </div>
+</body>
+</html>

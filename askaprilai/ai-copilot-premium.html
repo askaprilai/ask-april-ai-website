@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Co-Pilot Premium - Ask April AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ai-copilot-premium.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="ASkAprillogo .png" alt="Ask April AI Logo" class="logo-img">
+                <h2>Ask April AI</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="askapril-replica.html">Home</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="daily-ripple-page.html">Daily Ripple</a></li>
+                <li><a href="ai-copilot-premium.html">AI Co-Pilot Pro</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><div class="user-profile">
+                    <img src="aprilb.png" alt="User" class="user-avatar">
+                    <span class="user-name">Premium Member</span>
+                    <div class="premium-badge">PRO</div>
+                </div></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Premium Hero -->
+    <section class="premium-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="premium-header">
+                    <div class="premium-icon">👑</div>
+                    <h1>AI Co-Pilot Premium</h1>
+                    <p class="premium-subtitle">Advanced leadership document generation with unlimited access and premium features</p>
+                </div>
+                <div class="premium-stats">
+                    <div class="stat-card">
+                        <h3>Unlimited</h3>
+                        <p>Document Generation</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>15+</h3>
+                        <p>Document Types</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>AI-Powered</h3>
+                        <p>Industry Insights</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>24/7</h3>
+                        <p>Expert Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions Dashboard -->
+    <section class="dashboard-section">
+        <div class="container">
+            <h2>Your Leadership Command Center</h2>
+            <div class="dashboard-grid">
+                <div class="dashboard-card recent-docs">
+                    <h3>📁 Recent Documents</h3>
+                    <div class="recent-list">
+                        <div class="recent-item">
+                            <span class="doc-icon">📋</span>
+                            <div class="doc-info">
+                                <h4>Employee Handbook v2.0</h4>
+                                <p>Updated 2 hours ago</p>
+                            </div>
+                            <button class="action-btn">Edit</button>
+                        </div>
+                        <div class="recent-item">
+                            <span class="doc-icon">🎓</span>
+                            <div class="doc-info">
+                                <h4>Customer Service Training</h4>
+                                <p>Created yesterday</p>
+                            </div>
+                            <button class="action-btn">View</button>
+                        </div>
+                        <div class="recent-item">
+                            <span class="doc-icon">📄</span>
+                            <div class="doc-info">
+                                <h4>Safety Policy Update</h4>
+                                <p>Created 3 days ago</p>
+                            </div>
+                            <button class="action-btn">Download</button>
+                        </div>
+                    </div>
+                    <button class="view-all-btn">View All Documents →</button>
+                </div>
+
+                <div class="dashboard-card quick-create">
+                    <h3>⚡ Quick Create</h3>
+                    <div class="quick-actions">
+                        <button class="quick-action-btn" data-type="performance-review">
+                            <span class="action-icon">⭐</span>
+                            <span class="action-text">Performance Review</span>
+                        </button>
+                        <button class="quick-action-btn" data-type="job-description">
+                            <span class="action-icon">💼</span>
+                            <span class="action-text">Job Description</span>
+                        </button>
+                        <button class="quick-action-btn" data-type="meeting-agenda">
+                            <span class="action-icon">📅</span>
+                            <span class="action-text">Meeting Agenda</span>
+                        </button>
+                        <button class="quick-action-btn" data-type="sop">
+                            <span class="action-icon">⚙️</span>
+                            <span class="action-text">SOP Document</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="dashboard-card analytics">
+                    <h3>📊 Your Impact</h3>
+                    <div class="analytics-stats">
+                        <div class="analytics-item">
+                            <h4>23</h4>
+                            <p>Documents Created</p>
+                        </div>
+                        <div class="analytics-item">
+                            <h4>156</h4>
+                            <p>Hours Saved</p>
+                        </div>
+                        <div class="analytics-item">
+                            <h4>5</h4>
+                            <p>Teams Improved</p>
+                        </div>
+                    </div>
+                    <div class="progress-ring">
+                        <div class="ring-progress" data-progress="78">
+                            <span class="progress-text">78%</span>
+                            <span class="progress-label">Efficiency Gained</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Document Types -->
+    <section class="premium-documents">
+        <div class="container">
+            <h2>Premium Document Library</h2>
+            <p class="section-subtitle">Access to 15+ advanced document types with industry-specific customization</p>
+            
+            <div class="document-categories">
+                <div class="category-tab active" data-category="hr">HR & Management</div>
+                <div class="category-tab" data-category="training">Training & Development</div>
+                <div class="category-tab" data-category="operations">Operations & Safety</div>
+                <div class="category-tab" data-category="compliance">Compliance & Legal</div>
+            </div>
+
+            <div class="documents-grid" id="documentsGrid">
+                <!-- HR & Management Category -->
+                <div class="doc-category active" data-category="hr">
+                    <div class="premium-doc-card">
+                        <div class="doc-header">
+                            <span class="doc-icon">📋</span>
+                            <span class="premium-label">PREMIUM</span>
+                        </div>
+                        <h3>Employee Handbook Pro</h3>
+                        <p>Comprehensive handbook with legal compliance, benefits details, and industry-specific policies</p>
+                        <div class="doc-features">
+                            <span>✓ Legal compliance</span>
+                            <span>✓ Industry-specific</span>
+                            <span>✓ Multi-format export</span>
+                        </div>
+                        <button class="create-doc-btn" data-type="employee-handbook-pro">Create Document</button>
+                    </div>
+
+                    <div class="premium-doc-card">
+                        <div class="doc-header">
+                            <span class="doc-icon">⭐</span>
+                            <span class="premium-label">PREMIUM</span>
+                        </div>
+                        <h3>Performance Review System</h3>
+                        <p>Complete performance evaluation framework with goals, metrics, and development plans</p>
+                        <div class="doc-features">
+                            <span>✓ 360-degree reviews</span>
+                            <span>✓ Goal tracking</span>
+                            <span>✓ Development plans</span>
+                        </div>
+                        <button class="create-doc-btn" data-type="performance-review">Create Document</button>
+                    </div>
+
+                    <div class="premium-doc-card">
+                        <div class="doc-header">
+                            <span class="doc-icon">💼</span>
+                            <span class="premium-label">PREMIUM</span>
+                        </div>
+                        <h3>Job Description Generator</h3>
+                        <p>AI-powered job descriptions with market salary data and skill requirements</p>
+                        <div class="doc-features">
+                            <span>✓ Market salary data</span>
+                            <span>✓ Skill requirements</span>
+                            <span>✓ ATS-optimized</span>
+                        </div>
+                        <button class="create-doc-btn" data-type="job-description">Create Document</button>
+                    </div>
+
+                    <div class="premium-doc-card">
+                        <div class="doc-header">
+                            <span class="doc-icon">📈</span>
+                            <span class="premium-label">PREMIUM</span>
+                        </div>
+                        <h3>Team Development Plan</h3>
+                        <p>Strategic team growth roadmap with skill assessments and training pathways</p>
+                        <div class="doc-features">
+                            <span>✓ Skill assessments</span>
+                            <span>✓ Training pathways</span>
+                            <span>✓ Progress tracking</span>
+                        </div>
+                        <button class="create-doc-btn" data-type="team-development">Create Document</button>
+                    </div>
+                </div>
+
+                <!-- Training & Development Category -->
+                <div class="doc-category" data-category="training">
+                    <div class="premium-doc-card">
+                        <div class="doc-header">
+                            <span class="doc-icon">🎓</span>
+                            <span class="premium-label">PREMIUM</span>
+                        </div>
+                        <h3>Advanced Training Program</h3>
+                        <p>Multi-module training with assessments, certifications, and progress tracking</p>
+                        <div class="doc-features">
+                            <span>✓ Multi-module design</span>
+                            <span>✓ Assessment tools</span>
+                            <span>✓ Certification system</span>
+                        </div>
+                        <button class="create-doc-btn" data-type="advanced-training">Create Document</button>
+                    </div>
+
+                    <div class="premium-doc-card">
+                        <div class="doc-header">
+                            <span class="doc-icon">📚</span>
+                            <span class="premium-label">PREMIUM</span>
+                        </div>
+                        <h3>Leadership Development Curriculum</h3>
+                        <p>Comprehensive leadership training with coaching modules and skill assessments</p>
+                        <div class="doc-features">
+                            <span>✓ Coaching modules</span>
+                            <span>✓ Skill assessments</span>
+                            <span>✓ Practice scenarios</span>
+                        </div>
+                        <button class="create-doc-btn" data-type="leadership-curriculum">Create Document</button>
+                    </div>
+                </div>
+
+                <!-- Operations & Safety Category -->
+                <div class="doc-category" data-category="operations">
+                    <div class="premium-doc-card">
+                        <div class="doc-header">
+                            <span class="doc-icon">⚙️</span>
+                            <span class="premium-label">PREMIUM</span>
+                        </div>
+                        <h3>Standard Operating Procedures</h3>
+                        <p>Detailed SOPs with visual aids, quality checkpoints, and compliance tracking</p>
+                        <div class="doc-features">
+                            <span>✓ Visual workflow</span>
+                            <span>✓ Quality checkpoints</span>
+                            <span>✓ Compliance tracking</span>
+                        </div>
+                        <button class="create-doc-btn" data-type="sop-advanced">Create Document</button>
+                    </div>
+
+                    <div class="premium-doc-card">
+                        <div class="doc-header">
+                            <span class="doc-icon">🛡️</span>
+                            <span class="premium-label">PREMIUM</span>
+                        </div>
+                        <h3>Safety Management System</h3>
+                        <p>Comprehensive safety program with incident reporting and risk assessments</p>
+                        <div class="doc-features">
+                            <span>✓ Incident reporting</span>
+                            <span>✓ Risk assessments</span>
+                            <span>✓ Safety training</span>
+                        </div>
+                        <button class="create-doc-btn" data-type="safety-system">Create Document</button>
+                    </div>
+                </div>
+
+                <!-- Compliance & Legal Category -->
+                <div class="doc-category" data-category="compliance">
+                    <div class="premium-doc-card">
+                        <div class="doc-header">
+                            <span class="doc-icon">⚖️</span>
+                            <span class="premium-label">PREMIUM</span>
+                        </div>
+                        <h3>Compliance Framework</h3>
+                        <p>Industry-specific compliance documentation with legal review checkpoints</p>
+                        <div class="doc-features">
+                            <span>✓ Legal compliance</span>
+                            <span>✓ Industry-specific</span>
+                            <span>✓ Audit-ready</span>
+                        </div>
+                        <button class="create-doc-btn" data-type="compliance-framework">Create Document</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Panel -->
+    <section class="ai-assistant-panel" id="aiAssistant">
+        <div class="assistant-header">
+            <div class="assistant-avatar">
+                <img src="aprilb.png" alt="April AI" class="assistant-image">
+                <div class="status-indicator online"></div>
+            </div>
+            <div class="assistant-info">
+                <h3>April AI Assistant</h3>
+                <p class="assistant-status">Ready to help • Premium Mode</p>
+            </div>
+            <button class="minimize-btn" id="minimizeAssistant">−</button>
+        </div>
+        <div class="assistant-body">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai-message">
+                    <p>Hi! I'm April's AI assistant. I can help you create any document, answer questions about leadership, or guide you through our premium features. What would you like to work on today?</p>
+                </div>
+            </div>
+            <div class="quick-suggestions">
+                <button class="suggestion-btn">"Create a performance review template"</button>
+                <button class="suggestion-btn">"Help me improve team communication"</button>
+                <button class="suggestion-btn">"Generate a safety checklist"</button>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask me anything about leadership or document creation...">
+                <button id="sendMessage">Send</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="ASkAprillogo .png" alt="Ask April AI Logo" class="footer-logo-img">
+                        <h3>Ask April AI</h3>
+                    </div>
+                    <p>Premium leadership coaching for service industry managers, powered by 30 years of proven expertise.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Premium Features</h4>
+                    <ul>
+                        <li><a href="#">Unlimited Documents</a></li>
+                        <li><a href="#">Advanced Templates</a></li>
+                        <li><a href="#">Priority Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Premium Help Center</a></li>
+                        <li><a href="#">Live Chat Support</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="#">Billing</a></li>
+                        <li><a href="#">Usage Analytics</a></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ask April AI Premium. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Coming Soon Overlay -->
+    <div class="coming-soon-overlay" id="comingSoonOverlay">
+        <div class="coming-soon-modal">
+            <div class="coming-soon-content">
+                <div class="coming-soon-icon">🚀</div>
+                <h2>AI Co-Pilot Premium</h2>
+                <h3>Coming Soon!</h3>
+                <p>We're putting the finishing touches on our advanced AI Co-Pilot. Get ready for the most powerful leadership document creation tool ever built.</p>
+                
+                <div class="coming-soon-features">
+                    <div class="feature-preview">
+                        <span class="feature-icon">✨</span>
+                        <span>Advanced AI Document Generation</span>
+                    </div>
+                    <div class="feature-preview">
+                        <span class="feature-icon">📋</span>
+                        <span>15+ Professional Templates</span>
+                    </div>
+                    <div class="feature-preview">
+                        <span class="feature-icon">🔧</span>
+                        <span>Document Enhancement & Analysis</span>
+                    </div>
+                    <div class="feature-preview">
+                        <span class="feature-icon">💾</span>
+                        <span>Multiple Export Formats</span>
+                    </div>
+                </div>
+                
+                <div class="coming-soon-cta">
+                    <p><strong>Want early access?</strong></p>
+                    <a href="https://www.delphi.ai/askaprilai/free-trial" target="_blank" class="early-access-btn">Get Notified When Ready</a>
+                    <p class="small-text">Join our waitlist and be among the first to experience AI Co-Pilot Premium</p>
+                </div>
+                
+                <button class="close-overlay-btn" id="closeOverlay">✕</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="ai-copilot-premium.js"></script>
+    
+    <script>
+        // Show coming soon overlay on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const overlay = document.getElementById('comingSoonOverlay');
+            const closeBtn = document.getElementById('closeOverlay');
+            
+            // Show overlay
+            overlay.style.display = 'flex';
+            
+            // Close overlay functionality
+            closeBtn.addEventListener('click', function() {
+                overlay.style.display = 'none';
+            });
+            
+            // Close on background click
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) {
+                    overlay.style.display = 'none';
+                }
+            });
+            
+            // Disable all interactive elements when overlay is shown
+            const interactiveElements = document.querySelectorAll('button, a, input, .create-doc-btn, .action-option');
+            interactiveElements.forEach(element => {
+                if (element.id !== 'closeOverlay' && !element.closest('.coming-soon-overlay')) {
+                    element.style.pointerEvents = 'none';
+                    element.style.opacity = '0.7';
+                }
+            });
+        });
+    </script>
+    
+    <style>
+        .coming-soon-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .coming-soon-modal {
+            background: linear-gradient(135deg, #fff 0%, #f8fafc 100%);
+            border-radius: 24px;
+            padding: 48px 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            position: relative;
+            animation: slideUp 0.4s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .coming-soon-icon {
+            font-size: 4rem;
+            margin-bottom: 24px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .coming-soon-content h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .coming-soon-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #059669;
+            margin-bottom: 16px;
+        }
+        
+        .coming-soon-content p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        
+        .coming-soon-features {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 32px;
+            border: 1px solid #e1e5e9;
+        }
+        
+        .feature-preview {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .feature-preview:last-child {
+            margin-bottom: 0;
+        }
+        
+        .feature-icon {
+            font-size: 1.2rem;
+            width: 24px;
+        }
+        
+        .coming-soon-cta {
+            margin-bottom: 16px;
+        }
+        
+        .coming-soon-cta p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+        
+        .early-access-btn {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+        }
+        
+        .early-access-btn:hover {
+            background: linear-gradient(135deg, #047857 0%, #059669 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.35);
+        }
+        
+        .small-text {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            margin-top: 12px;
+        }
+        
+        .close-overlay-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #6b7280;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        
+        .close-overlay-btn:hover {
+            background: #f3f4f6;
+            color: #374151;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 640px) {
+            .coming-soon-modal {
+                padding: 32px 24px;
+                margin: 20px;
+            }
+            
+            .coming-soon-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .coming-soon-content h3 {
+                font-size: 1.25rem;
+            }
+            
+            .coming-soon-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</body>
+</html>

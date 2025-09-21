@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Workspace - Ask April AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="member-workspace.css">
+</head>
+<body>
+    <!-- Member Navigation -->
+    <nav class="member-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="ASkAprillogo .png" alt="Ask April AI Logo" class="logo-img">
+                <h2>Ask April AI</h2>
+                <span class="workspace-label">Member Workspace</span>
+            </div>
+            <div class="nav-actions">
+                <div class="user-profile">
+                    <img src="aprilb.png" alt="User" class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">John Manager</span>
+                        <span class="user-plan">Premium Member</span>
+                    </div>
+                    <div class="user-menu">
+                        <button class="menu-btn">⚙️</button>
+                        <div class="dropdown-menu">
+                            <a href="#">Account Settings</a>
+                            <a href="#">Billing</a>
+                            <a href="#">Help Center</a>
+                            <hr>
+                            <a href="#" class="logout">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Chat Interface -->
+    <section class="chat-workspace">
+        <div class="chat-container">
+            <!-- Left Sidebar -->
+            <div class="chat-sidebar">
+                <div class="sidebar-header">
+                    <button class="new-chat-btn" id="newChatBtn">
+                        <span class="plus-icon">+</span>
+                        <span>New Document</span>
+                    </button>
+                </div>
+                
+                <div class="recent-chats">
+                    <div class="chat-item active">
+                        <div class="chat-icon">📋</div>
+                        <div class="chat-info">
+                            <h4>Employee Handbook</h4>
+                            <p>2 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-icon">🎓</div>
+                        <div class="chat-info">
+                            <h4>Training Program</h4>
+                            <p>Yesterday</p>
+                        </div>
+                    </div>
+                    <div class="chat-item">
+                        <div class="chat-icon">📄</div>
+                        <div class="chat-info">
+                            <h4>Safety Policy</h4>
+                            <p>3 days ago</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-footer">
+                    <div class="user-info">
+                        <img src="aprilb.png" alt="User" class="user-avatar">
+                        <div class="user-details">
+                            <span class="user-name">John Manager</span>
+                            <span class="user-plan">Premium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Chat Area -->
+            <div class="chat-main">
+                <!-- Welcome Screen -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-content">
+                        <div class="april-avatar">
+                            <img src="aprilb.png" alt="April AI" class="april-image">
+                        </div>
+                        <h1>Hi John! I'm April AI</h1>
+                        <p>I can help you create professional leadership documents. What would you like to work on today?</p>
+                        
+                        <div class="action-section">
+                            <h2>What would you like to do?</h2>
+                            <div class="main-actions">
+                                <div class="action-option" id="createNewOption">
+                                    <div class="action-icon">✨</div>
+                                    <h3>Create New Document</h3>
+                                    <p>Start from scratch with AI guidance</p>
+                                </div>
+                                <div class="action-option upload-option" id="uploadOption" onclick="document.getElementById('fileInput').click()">
+                                    <div class="action-icon">📎</div>
+                                    <h3>Upload & Improve</h3>
+                                    <p>Upload your existing document to enhance it</p>
+                                    <div class="upload-hint">Drag & drop or click to upload</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="suggestion-cards" id="documentTypes" style="display: none;">
+                            <h3>Choose a document type:</h3>
+                            <div class="cards-grid">
+                                <button class="suggestion-card" data-suggestion="Create an employee handbook for my retail store">
+                                    <div class="suggestion-icon">📋</div>
+                                    <h3>Employee Handbook</h3>
+                                    <p>Create a comprehensive handbook for your team</p>
+                                </button>
+                                
+                                <button class="suggestion-card" data-suggestion="Help me design a training program for customer service">
+                                    <div class="suggestion-icon">🎓</div>
+                                    <h3>Training Program</h3>
+                                    <p>Design effective training for your staff</p>
+                                </button>
+                                
+                                <button class="suggestion-card" data-suggestion="I need a performance review template">
+                                    <div class="suggestion-icon">⭐</div>
+                                    <h3>Performance Review</h3>
+                                    <p>Build fair and effective review processes</p>
+                                </button>
+                                
+                                <button class="suggestion-card" data-suggestion="Create a safety policy for my workplace">
+                                    <div class="suggestion-icon">🛡️</div>
+                                    <h3>Safety Policy</h3>
+                                    <p>Ensure workplace safety and compliance</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Messages -->
+                <div class="chat-messages" id="chatMessages" style="display: none;">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+
+                <!-- Chat Input -->
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <div class="attachment-btn" id="attachmentBtn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8.5 1a.5.5 0 0 0-1 0v11a.5.5 0 0 0 1 0V2.5L12 6l-3.5 3.5a.5.5 0 0 0 .707.707L13 6.414V12a.5.5 0 0 0 1 0V5.5L9.5 1z"/>
+                            </svg>
+                        </div>
+                        <textarea 
+                            id="chatInput" 
+                            placeholder="Tell me what document you'd like to create..."
+                            rows="1"
+                        ></textarea>
+                        <button class="send-btn" id="sendBtn" disabled>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Upload Area (hidden by default) -->
+                    <div class="upload-zone" id="uploadZone" style="display: none;">
+                        <div class="upload-content">
+                            <div class="upload-icon">📎</div>
+                            <p>Drop your file here to improve it with AI</p>
+                            <small>PDF, Word, HTML, or Text files (max 10MB)</small>
+                        </div>
+                        <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.txt,.html" hidden>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Generation Modal -->
+    <div class="generation-modal" id="generationModal" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="generation-header">
+                <h2>🤖 Creating Your Document</h2>
+                <p>This usually takes 2-3 minutes</p>
+            </div>
+            <div class="generation-progress">
+                <div class="april-avatar">
+                    <img src="aprilb.png" alt="April AI" class="working-avatar">
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="generationProgressFill"></div>
+                </div>
+                <div class="progress-text" id="generationProgressText">0% complete</div>
+                <div class="generation-steps" id="generationSteps">
+                    <div class="gen-step active">Analyzing your business requirements...</div>
+                    <div class="gen-step">Researching industry best practices...</div>
+                    <div class="gen-step">Generating document structure...</div>
+                    <div class="gen-step">Writing content sections...</div>
+                    <div class="gen-step">Final review and formatting...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Document Ready Modal -->
+    <div class="document-ready-modal" id="documentReadyModal" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="ready-header">
+                <div class="success-icon">🎉</div>
+                <h2>Your Document is Ready!</h2>
+                <p>I've created a professional document tailored to your business needs.</p>
+            </div>
+            <div class="document-preview">
+                <div class="preview-header">
+                    <h3 id="readyDocTitle">Employee Handbook</h3>
+                    <div class="doc-stats">
+                        <span>15 sections</span>
+                        <span>2,847 words</span>
+                        <span>Legal compliant</span>
+                    </div>
+                </div>
+            </div>
+            <div class="export-options">
+                <h4>Download Your Document:</h4>
+                <div class="export-buttons">
+                    <button class="export-btn pdf" id="downloadPdf">📄 PDF</button>
+                    <button class="export-btn word" id="downloadWord">📝 Word</button>
+                    <button class="export-btn html" id="downloadHtml">🌐 HTML</button>
+                    <button class="export-btn preview" id="previewDoc">👁️ Preview</button>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-secondary" id="createAnotherDoc">Create Another</button>
+                <button class="btn-primary" id="saveToLibrary">Save to Library</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="member-workspace.js"></script>
+</body>
+</html>

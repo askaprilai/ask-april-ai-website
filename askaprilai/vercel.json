@@ -2,7 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "askapril-replica.html",
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.png",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.jpg",
       "use": "@vercel/static"
     },
     {
@@ -14,6 +30,10 @@
     {
       "src": "/api/copilot/(.*)",
       "dest": "/ai-copilot-backend.js"
+    },
+    {
+      "src": "/",
+      "dest": "/askapril-replica.html"
     },
     {
       "src": "/(.*)",

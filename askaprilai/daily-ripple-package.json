@@ -1,0 +1,28 @@
+{
+  "name": "april-daily-ripple",
+  "version": "1.0.0",
+  "description": "Automated Daily Ripple podcast generation system",
+  "main": "daily-ripple-automation.js",
+  "scripts": {
+    "generate": "node daily-ripple-automation.js",
+    "create-week": "node scripts/generate-weekly.js",
+    "upload": "node scripts/upload-to-platforms.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "rss": "^1.2.2",
+    "moment": "^2.29.4",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "keywords": [
+    "podcast",
+    "automation",
+    "elevenlabs",
+    "leadership",
+    "inspiration"
+  ],
+  "author": "April Sabral"
+}

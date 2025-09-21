@@ -266,18 +266,9 @@ class DailyRipplePlayer {
     }
 
     handleCommunityAction(e) {
-        e.preventDefault();
-        const action = e.target.textContent.toLowerCase();
-        
-        if (action.includes('discussion')) {
-            this.openDiscussion();
-        } else if (action.includes('win')) {
-            this.openWinSharing();
-        } else if (action.includes('library')) {
-            this.openLibrary();
-        } else if (action.includes('reminder')) {
-            this.setupReminders();
-        }
+        // Let the default link behavior handle navigation
+        // Remove preventDefault to allow normal link navigation
+        return true;
     }
 
     openDiscussion() {
